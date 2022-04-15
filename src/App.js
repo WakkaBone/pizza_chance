@@ -48,22 +48,17 @@ function App() {
       `http://www.randomnumberapi.com/api/v1.0/random?min=1&max=${maxBugs}&count=1`
     ).then((res) => res.json());
 
-    if (!bugs) {
+    if (!bugs || !bugs[0]) {
       setPizzaPercent(1);
       setPizzaChance(1);
       return false;
     }
 
-    if (!bugs[0]) {
-      setPizzaPercent(1);
-      setPizzaChance(1);
-      return false;
-    }
     setNumberOfBugs(bugs[0]);
     return bugs[0];
   };
 
-  const algorythm = async () => {
+  const algorithm = async () => {
     const remainingTime =
       60 * endOfShift - (new Date().getHours() * 60 + new Date().getMinutes());
     setMinutesRemaining(remainingTime);
@@ -106,7 +101,7 @@ function App() {
   };
 
   useEffect(() => {
-    algorythm();
+    algorithm();
   }, []);
 
   return (
