@@ -45,7 +45,7 @@ function App() {
 
   const calculateBugs = async () => {
     let bugs = await fetch(
-      `http://www.randomnumberapi.com/api/v1.0/random?min=1&max=${maxBugs}&count=1`
+      `https://www.randomnumberapi.com/api/v1.0/random?min=1&max=${maxBugs}&count=1`
     ).then((res) => res.json());
 
     if (!bugs || !bugs[0]) {
