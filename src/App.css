@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(#0e2e55, 25%, #0f49b2, #082d74);
+  overflow: hidden;
+}
+
+.pizza {
+  width: 510px;
+  height: 225px;
+  background-image: url("http://lh3.googleusercontent.com/NqBhZqE2UPOka8w8Hd6vSgdDxzIU4OB8VrhjrQyU3aJWalZuw8agIJAmQ-BF6HCPh9938dd2kdcvJWw6nIPTgWpTCA84FwDAH2NytVM");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 0%;
+}
+
+@media (max-width: 500px) {
+  .pizza {
+    bottom: -5%;
+  }
+}
+
+@media (max-width: 400px) {
+  .pizza {
+    bottom: -10%;
+  }
+}
+
+@media (max-width: 370px) {
+  .pizza {
+    bottom: -20%;
+  }
+}
