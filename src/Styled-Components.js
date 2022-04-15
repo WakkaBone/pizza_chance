@@ -36,6 +36,7 @@ export const Arrow = styled.div`
   animation-fill-mode: forwards;
   @media (max-width: 500px) {
     bottom: -5%;
+    width: 170px;
   }
   @media (max-width: 400px) {
     bottom: -10%;
